@@ -4,6 +4,12 @@
   padding: 0;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 html {
   --font_col: #fafafa;
   --h2_col: #4cff1f;
