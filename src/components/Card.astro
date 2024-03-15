@@ -1,22 +1,28 @@
 ---
-
+const header = Astro.props.header;
+const text = Astro.props.text;
 ---
 
 <article class="card">
-     <img src="src/images/acid.webp" alt="acid pauli image">
+     <img src="src/img/acid.webp" alt="acid pauli image">
     <div class="name">
-     <h3>Acid Pauli <span>De</span></h3>
+     <h3>{header}<span>{text}</span></h3>
    </div>
 </article>
 
 <style>
-img{
-    width: 40%;
+
+.card{
+  
+    position: relative;
 }
 span{
     padding-left: 30px;
 }
 .name{
+    position: absolute;
+    left: 0.5rem;
+    bottom: 0;
     display: flex;
     justify-content: space-between;
     background-color: var(--background_col);
