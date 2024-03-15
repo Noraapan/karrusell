@@ -1,4 +1,17 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  --font_col: #fafafa;
+  --h2_col: #4cff1f;
+  --background_col: #131313;
+  --accent_col: #ff22fd;
+}
+
 body {
-  background-color: #131313;
-  color: #fafafa;
+  background-color: var(--background_col);
+  color: var(--font_col);
 }
