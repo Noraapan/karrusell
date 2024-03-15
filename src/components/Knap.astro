@@ -10,17 +10,22 @@ const {variant, size} = Astro.props;
         /* padding: 0.3rem 1.2rem 0.3rem 1.2rem; */
         border-radius: 10px;
         color: #FAFAFA;
-        border: none;
         text-decoration: none;
     }
     .join{
-        background-color: #FF22FD;
+        background-color: var(--accent_col);
         font-family: "Inter", sans-serif;
         font-weight: 700;
+        border: none;
     }
     .desktop{
         width: 135px;
         height: 44px;
         text-align: center;
+    }
+    .about{
+        border-color: var(--h2_col);
+        background-color: transparent;
+        font-family: "Alfa slab one", sans-serif;
     }
 </style>
