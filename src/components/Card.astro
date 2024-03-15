@@ -17,14 +17,16 @@ const text = Astro.props.text;
     position: relative;
 }
 span{
-    padding-left: 30px;
+    position: absolute;
+    top: 0;
+    font-size: 0.6em;
+
 }
 .name{
+    padding: 0.2rem;
     position: absolute;
     left: 0.5rem;
-    bottom: 0;
-    display: flex;
-    justify-content: space-between;
+    bottom: 1rem;
     background-color: var(--background_col);
     opacity: 50%;
 }
