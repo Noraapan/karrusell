@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/Footer.astro";
 import Card from "../components/Card.astro";
+import Knap from "../components/Knap.astro"
 ---
 
 <html lang="en">
@@ -11,6 +12,9 @@ import Card from "../components/Card.astro";
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro</title>
 		<link rel="stylesheet" href="../src/styles/style.css">
+		<!-- font -->
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 	</head>
 	<body>
 
@@ -19,6 +23,10 @@ import Card from "../components/Card.astro";
 			<Card>
 				
 			</Card>
+		</article>
+		<!-- button -->
+		<article>
+			<Knap variant="join" size="desktop">JOIN</Knap>
 		</article>
 
 		<footer>
