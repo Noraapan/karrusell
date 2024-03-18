@@ -1,13 +1,88 @@
 ---
 import "/src/styles/style.css";
+
 ---
 
-<nav>
+<nav class="navbar">
   <a href="../pages/index.astro"><img src="../public/img/clown1.svg" /></a>
-  <a href="../pages/listview.astro">LINEUP</a>
-  <a href="#">TICKETS</a>
-  <a href="#">NEWSLETTER</a>
-  <a href="#">ABOUT</a>
-  <a href="#">FAQ</a>
-  <a href="#">CONTACT</a>
+
+  <div class="menu-container">
+    <div class="menu-items">
+      <a href="../pages/listview.astro">LINEUP</a>
+      <a href="#">TICKETS</a>
+      <a href="#">NEWSLETTER</a>
+      <a href="#">ABOUT</a>
+      <a href="#">FAQ</a>
+      <a href="#">CONTACT</a>
+    </div>
+
+    <div class="burger-menu" onclick="toggleMenu()">
+      <div class="burger-line"></div>
+      <div class="burger-line"></div>
+      <div class="burger-line"></div>
+    </div>
+  </div>
 </nav>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const burgerMenu = document.querySelector(".burger-menu");
+    const menuItems = document.querySelector(".menu-items");
+
+    burgerMenu.addEventListener("click", function () {
+      burgerMenu.classList.toggle("active");
+      menuItems.classList.toggle("show");
+    });
+  });
+</script>
+
+<style>
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  .menu-container {
+    position: relative;
+  }
+
+  .burger-menu {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+  }
+
+  .burger-line {
+    width: 30px;
+    height: 3px;
+    background-color: #fafafa;
+    margin: 4px 0;
+  }
+
+  .menu-items {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    padding: 10px;
+  }
+
+  .menu-items.show {
+    display: block;
+  }
+
+  .burger-menu.active .burger-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+ .burger-menu.active .burger-line:nth-child(2) {
+    opacity: 0;
+  }
+  .burger-menu.active .burger-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+</style>
