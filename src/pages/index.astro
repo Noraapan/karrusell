@@ -15,11 +15,12 @@ import MainLayout from "../layout/MainLayout.astro";
 <Ticket variant="day"></Ticket>
 -->
 <article class="hero">
-<div class="hero_img"></div>
+<div class="hero_img"><img src="public/img/heroimg.webp" alt="hero imAGE"></div>
 
+<div class="ticket">
 <Ticket header="BUY YOUR TICKET" text="Karrusel" text2="Festival">
 	<a href="/#"></a>
-</Ticket>
+</Ticket></div>
 </article>
 
 <!--knappar -->
@@ -34,8 +35,10 @@ import MainLayout from "../layout/MainLayout.astro";
 article .hero_img{
 		position: absolute;
         width: 1440px;
-		background-image: url(public/img/heroimg.webp);
-        background-size: cover;
-        aspect-ratio: 1728/1145;
 }
+.ticket{
+        position: relative;
+        bottom: 0;
+		left: 30%;
+    }
 	</style>
