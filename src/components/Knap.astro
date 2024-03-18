@@ -18,6 +18,11 @@ const {variant, size} = Astro.props;
         font-weight: 700;
         border: none;
     }
+    .join:hover{
+        background-color:var(--font_col) ;
+        color: var(--accent_col);
+    }
+    
     .desktop{
         width: 135px;
         height: 44px;
@@ -28,5 +33,9 @@ const {variant, size} = Astro.props;
         background-color: transparent;
         font-family: "Alfa slab one", sans-serif;
        border-width: 2px;
+    }
+    .about:hover{
+        background-color: var(--h2_col);
+        color: var(--background_col);
     }
 </style>

@@ -4,6 +4,7 @@ import "/src/styles/style.css";
 import Footer from "../components/Footer.astro";
 import Card from "../components/Card.astro";
 import Knap from "../components/Knap.astro"
+import Ticket from "../components/Ticket.astro";
 ---
 
 <html lang="en">
@@ -20,7 +21,9 @@ import Knap from "../components/Knap.astro"
 	<body>
 
 		<h1>Astro</h1>
-
+		<Ticket variant="full"></Ticket>
+		<Ticket variant="day"></Ticket>
+		<Ticket variant="home">BUY YOUR TICKET</Ticket>
 		<Knap variant="join" size="desktop">JOIN</Knap>
 		<Knap variant="about" size="desktop">HISTORY</Knap>
 		<Knap variant="about" size="desktop">SUSTAINABILITY</Knap>
