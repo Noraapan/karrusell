@@ -1,12 +1,14 @@
 ---
 const header = Astro.props.header;
 const text = Astro.props.text;
+const text2 = Astro.props.text2;
 ---
 
 <div class=ticket>
     <slot />
 <h3>{header}</h3>
 <p>{text}</p>
+<p class="text2">{text2}</p>
 </div>
 
 <style>
@@ -20,5 +22,21 @@ const text = Astro.props.text;
     }
     h3, p{
         position: relative;
+        font-family: "Alfa slab one", sans-serif;
+        }
+        h3{
+            top: 37%;
+            left: 20%;
+            transform: rotate(-10.98deg);
+        }
+        p{
+            top: 105%;
+            left: 46%;
+            transform: rotate(-280.99deg);
+        }
+        p.text2{
+            top: 99%;
+            left: 40%;
+            transform: rotate(-280.99deg);   
         }
 </style>

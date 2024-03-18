@@ -7,14 +7,16 @@ import Ticket from "../components/Ticket.astro";
 
 import MainLayout from "../layout/MainLayout.astro";
 ---
-<MainLayout>
-		<h1>Astro</h1>
-		<Ticket variant="full"></Ticket>
-		<Ticket variant="day"></Ticket>
 
-		<Ticket header="BUY YOUR TICKET" text="Karrusel Festival">
-			<a href="/#"></a>
-		</Ticket>
+<h1>Astro</h1>
+<Ticket variant="full"></Ticket>
+<Ticket variant="day"></Ticket>
+
+<Ticket header="BUY YOUR TICKET" text="Karrusel Festival">
+	<a href="/#"></a>
+</Ticket>
+
+<MainLayout>
 
 		<Knap variant="join" size="desktop">JOIN</Knap>
 		<Knap variant="about" size="desktop">HISTORY</Knap>
