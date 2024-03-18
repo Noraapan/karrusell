@@ -1,0 +1,39 @@
+---
+import MainLayout from "../../layout/MainLayout.astro";
+export async function getStaticPaths() {
+  const data = await fetch("https://uxndprtzubwvqmyzoljl.supabase.co/rest/v1/lineup",
+  {
+	method:"GET",
+	headers: {
+		apikey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV4bmRwcnR6dWJ3dnFteXpvbGpsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDc3NzE5MTUsImV4cCI6MjAyMzM0NzkxNX0.w6gKed3u4tzlHudLYhCmT78TSt5lND2aYd3eQ8gsrVs"
+	}
+  }
+  ).then(response => response.json());
+
+  return data.map((show) => {
+    return {
+      params: { slug: show.slug },
+      props: { myData:show },
+    };
+  });
+}
+const { myData } = Astro.props;
+console.log(myData);
+---
+<MainLayout title={myData.name}>
+<h1>{myData.name}</h1>
+<p>{myData.description}</p>
+
+</MainLayout>
+
+<!-- {
+    id: 3,
+    name: 'FJAAK',
+    description: 'German electronic duo FJAAK produce driving, energetic dance tracks which range from reflective power house to storming warehouse techno, with occasional U.K. garage, dub, and breakbeat hardcore influences. Gritty yet sensual, most of their tracks are composed entirely on analog equipment.',
+    location: 'Manegen',
+    date: '2024-03-25',
+    image: '3.jpeg',
+    spotify: 'https://open.spotify.com/artist/4qG1qjeHfkASTdyRGbLWbV',
+    country: 'DE',
+    slug: 'fjaak'
+  } -->

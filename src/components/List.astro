@@ -1,14 +1,14 @@
 ---
 import Card from "../components/Card.astro";
 const { data } = Astro.props;
-console.log(data)
 ---
-
-<article>
-    <Card header={data.name} text={data.country}>
-        <img src = `https://uxndprtzubwvqmyzoljl.supabase.co/storage/v1/object/public/lineup/${data.id}.jpeg`;>
-    </Card>
-</article>
+<a href={`lineup/${data.slug}`}>
+    <article>
+     <Card header={data.name} text={data.country}>
+         <img src = `https://uxndprtzubwvqmyzoljl.supabase.co/storage/v1/object/public/lineup/${data.id}.jpeg`;>
+     </Card>
+    </article>
+</a>
 
 <style>
     img {
