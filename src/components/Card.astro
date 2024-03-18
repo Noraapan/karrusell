@@ -4,19 +4,29 @@ const text = Astro.props.text;
 ---
 
 <article class="card">
-    <slot />
+    <slot class="img" />
     <div class="name">
      <h3>{header}<span>{text}</span></h3>
    </div>
 </article>
 
 <style>
-
 .card{
     width: 371px;
     height: 271px;
     position: relative;
 }
+
+.img {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.img:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
 span{
     position: absolute;
     top: 0;
