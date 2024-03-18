@@ -19,7 +19,6 @@ export async function getStaticPaths() {
   });
 }
 const { myData } = Astro.props;
-console.log(myData);
 ---
 <!-- i dont know why it is a bunch of errors because i followed Jonas'
      video every step, and everything works? I also followed Jonas' video
@@ -29,7 +28,7 @@ console.log(myData);
 <dev class="grid">
     <dev class="singleHero">
     <img src = `https://uxndprtzubwvqmyzoljl.supabase.co/storage/v1/object/public/lineup/${myData.id}.jpeg`;>
-    <h2>{myData.name}</h2>
+    <h2 class="artistName">{myData.name}</h2>
     </dev>
 <p class="desc">{myData.description}</p>
 <dl class="info">
@@ -63,7 +62,7 @@ console.log(myData);
     }
 
     .grid{
-        margin: 0 50px 0 50px;
+        margin: 0 100px 0 100px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -73,6 +72,9 @@ console.log(myData);
         grid-row: 1/2;
         width: 924px;
         height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
     }
     .singleHero img{
      width: 924px;
@@ -80,7 +82,7 @@ console.log(myData);
      object-fit: cover;
     }
     .info{
-        margin-top: 50px;
+        margin-left: 80px;
         grid-column: 1/2;
         grid-row: 2/3;
         margin-top: 80px;
@@ -91,6 +93,16 @@ console.log(myData);
     }
     .desc{
         margin-top: 80px;
+        margin-right: 80px;
+    }
+
+    .artistName{
+    padding: 0.2rem;
+    padding-right: 2rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 22.5rem;
+    mix-blend-mode: exclusion;
     }
  
 </style>
