@@ -1,5 +1,13 @@
 ---
-import Card from "../components/Card.astro";
+import List from "../components/List.astro";
+const data = await fetch("https://uxndprtzubwvqmyzoljl.supabase.co/rest/v1/lineup",{
+	method:"GET",
+	headers: {
+		apikey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV4bmRwcnR6dWJ3dnFteXpvbGpsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDc3NzE5MTUsImV4cCI6MjAyMzM0NzkxNX0.w6gKed3u4tzlHudLYhCmT78TSt5lND2aYd3eQ8gsrVs"
+	}
+}).then(res=>res.json());
+
+
 ---
 
 <html lang="en">
@@ -15,10 +23,24 @@ import Card from "../components/Card.astro";
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 	</head>
 	<body>
-
-		<h1>Astro</h1>
-		<Card header="ACID PAULI" text="DE"/>
-</main>
-
+		<main class="margin">
+			<section class="artists">
+				{
+				data.map((artist) => {
+					return <List data={artist} />;
+				})}
+				
+			</section>
+		</main>
 	</body>
 </html>
+
+<style>
+	.margin{
+		margin: 0 5em 0 5em;
+	}
+	.artists{
+	  display: grid;
+	  grid-template-columns: repeat(3, 1fr);
+	}
+  </style>
