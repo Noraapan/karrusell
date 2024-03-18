@@ -29,9 +29,8 @@ body {
 
 h1 {
   font-family: Future-West;
-  stroke: var(--background_col);
+  background: transparent;
 }
-h3,
 p,
 a {
   color: var(--font_col);
