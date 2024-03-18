@@ -1,42 +1,44 @@
 ---
 import "/src/styles/style.css";
 
-import Footer from "../components/Footer.astro";
-import Card from "../components/Card.astro";
 import Knap from "../components/Knap.astro"
 import Ticket from "../components/Ticket.astro";
+
+import MainLayout from "../layout/MainLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-		<!-- font -->
-<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-	</head>
-	<body>
 
-		<h1>Astro</h1>
-		<Ticket variant="full"></Ticket>
-		<Ticket variant="day"></Ticket>
-		<Ticket variant="home">BUY YOUR TICKET</Ticket>
+
+<MainLayout>
+<!-- Other tickets
+<Ticket variant="full"></Ticket>
+<Ticket variant="day"></Ticket>
+-->
+<article class="hero">
+<div class="hero_img"><img src="public/img/heroimg.webp" alt="hero imAGE"></div>
+<div class="countdown"><h1>COUNTDOWN</h1></div>
+<div class="ticket">
+<Ticket header="BUY YOUR TICKET" text="Karrusel" text2="Festival">
+	<a href="/#"></a>
+</Ticket></div>
+</article>
+
+<!--knappar -->
+<!-- 
 		<Knap variant="join" size="desktop">JOIN</Knap>
 		<Knap variant="about" size="desktop">HISTORY</Knap>
 		<Knap variant="about" size="desktop">SUSTAINABILITY</Knap>
-		<Knap variant="about" size="desktop">CONTACT</Knap>
+		<Knap variant="about" size="desktop">CONTACT</Knap>-->
+	</MainLayout>
 
-		<Card header="ACID PAULI" text="DE">
-			<img src="../img/acid.webp" alt="acid pauli">
-		</Card>
-</main>
-		<footer>
-			<Footer>
-
-			</Footer>
-		</footer>
-	</body>
-</html>
+	<style>
+article .hero_img{
+		position: absolute;
+        width: 1440px;
+}
+.ticket{
+        position: relative;
+        bottom: 0;
+		left: 30%;
+    }
+	</style>
