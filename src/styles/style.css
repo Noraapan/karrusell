@@ -20,7 +20,6 @@ html {
 @font-face {
   font-family: Future-West;
   src: url(public/fonts/Future-West.woff2);
-  background-color: transparent;
 }
 
 body {
@@ -29,6 +28,7 @@ body {
 
 h1 {
   font-family: Future-West;
+  color: var(--font_col);
 }
 h3 {
   font-family: "Alfa slab one", sans-serif;

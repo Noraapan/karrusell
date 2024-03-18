@@ -15,14 +15,19 @@ import MainLayout from "../layout/MainLayout.astro";
 <Ticket variant="day"></Ticket>
 -->
 <!--hero: skifte billede mod video -->
-<div>
-	<Hero header="COUNTDOWN" text="08:09:08">
+<div class="hero">
+	<Hero header="COUNTDOWN" text="">
 		<img src="public/img/heroimg.webp" alt="hero img">
 	</Hero>
 </div>
 <!--banderoll -->
-
+<div class="banderoll">
+	<img src="../img/line.svg" alt="Linje">
+	<h3>LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP</h3>
+	<img src="../img/line.svg" alt="Linje">
+</div>
 <!--line up -->
+
 <article>
 <h3 class="date">THURSDAY 22/8</h3>
 <section><h3 class="h_1">ÂME • KÖLSCH  • MCADAM • SCHAARUP</h2></section>
@@ -53,6 +58,17 @@ import MainLayout from "../layout/MainLayout.astro";
 	</MainLayout>
 
 	<style>
+.banderoll h3{
+font-size: 5rem;
+color: var(--font_col);
+margin-top: 1rem;
+margin-bottom: 1rem;
+display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    will-change: transform;
+    white-space: nowrap;
+}
 		.date{
 	
 			padding: 80px 0 0 0;
