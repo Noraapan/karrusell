@@ -25,9 +25,14 @@ html {
 
 body {
   background-color: var(--background_col);
-  color: var(--font_col);
 }
 
 h1 {
   font-family: Future-West;
+  stroke: var(--background_col);
+}
+h3,
+p,
+a {
+  color: var(--font_col);
 }

@@ -5,7 +5,7 @@ const text = Astro.props.text;
 import Ticket from "../components/Ticket.astro";
 
 ---
-
+<article>
 <div class="hero">
     <slot />
 <h1 class="countdown">{header}</h1>
@@ -16,6 +16,7 @@ import Ticket from "../components/Ticket.astro";
     <Ticket header="BUY YOUR TICKET" text="Karrusel" text2="Festival">
         <a href="/#"></a>
     </Ticket></div>
+</article>
 
 <style>
 .hero {
@@ -25,17 +26,21 @@ import Ticket from "../components/Ticket.astro";
 .ticket {
     position: absolute;
     left: 30%;
-    top: 70%;
+    top: 100%;
 }
 #klocka{
     position: absolute;
-    left: 40%;
+    left: 30%;
     top: 40%;
+    text-align: center;
 }
 .countdown{
     position: absolute;
-    left: 40%;
+    left: 30%;
     top: 30%; 
+}
+h1{
+    font-size: 3em;
 }
 
 </style>
