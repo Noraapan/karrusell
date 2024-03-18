@@ -8,22 +8,18 @@ import Ticket from "../components/Ticket.astro";
 import MainLayout from "../layout/MainLayout.astro";
 ---
 
-<h1>Astro</h1>
+
+
+<MainLayout>
+<!-- Other tickets
 <Ticket variant="full"></Ticket>
 <Ticket variant="day"></Ticket>
-
+-->
 <Ticket header="BUY YOUR TICKET" text="Karrusel" text2="Festival">
 	<a href="/#"></a>
 </Ticket>
-
-<MainLayout>
-
 		<Knap variant="join" size="desktop">JOIN</Knap>
 		<Knap variant="about" size="desktop">HISTORY</Knap>
 		<Knap variant="about" size="desktop">SUSTAINABILITY</Knap>
 		<Knap variant="about" size="desktop">CONTACT</Knap>
-
-		<Card header="ACID PAULI" text="DE">
-			<img src="../img/acid.webp" alt="acid pauli">
-		</Card>
 	</MainLayout>
