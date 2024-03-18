@@ -3,16 +3,20 @@ const header = Astro.props.header;
 const text = Astro.props.text;
 const text2 = Astro.props.text2;
 ---
-
-<div class=ticket>
-    <slot />
+<article class="ticket">
+<div class=ticket2>
+    <slot /> 
 <h3>{header}</h3>
 <p>{text}</p>
 <p class="text2">{text2}</p>
 </div>
+</article>
 
 <style>
-    .ticket{
+    article.ticket{
+        position: relative;
+    }
+    .ticket2{
         position: absolute;
         width: 476px;
         height: 230px;
