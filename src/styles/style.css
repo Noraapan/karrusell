@@ -29,9 +29,15 @@ body {
 
 h1 {
   font-family: Future-West;
-  background: transparent;
+}
+h3 {
+  font-family: "Alfa slab one", sans-serif;
+  color: var(--h2_col);
+  font-size: 1.4rem;
+  letter-spacing: 2.3px;
 }
 p,
 a {
+  font-family: "Inter", sans-serif;
   color: var(--font_col);
 }
