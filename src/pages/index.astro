@@ -7,20 +7,7 @@ import Ticket from "../components/Ticket.astro";
 
 import MainLayout from "../layout/MainLayout.astro";
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-		<!-- font -->
-<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
-	</head>
-	<body>
-
+<MainLayout>
 		<h1>Astro</h1>
 		<Ticket variant="full"></Ticket>
 		<Ticket variant="day"></Ticket>
@@ -37,6 +24,4 @@ import MainLayout from "../layout/MainLayout.astro";
 		<Card header="ACID PAULI" text="DE">
 			<img src="../img/acid.webp" alt="acid pauli">
 		</Card>
-</main>
-	</body>
-</html>
+	</MainLayout>
