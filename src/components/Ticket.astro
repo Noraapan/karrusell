@@ -1,15 +1,24 @@
 ---
-const {variant} = Astro.props;
+const header = Astro.props.header;
+const text = Astro.props.text;
 ---
 
-<a class={variant}>
+<div class=ticket>
     <slot />
-</a>
+<h3>{header}</h3>
+<p>{text}</p>
+</div>
 
 <style>
-    a{
-
-    }   
-
-
+    .ticket{
+        position: absolute;
+        width: 476px;
+        height: 230px;
+        background-image: url(/public/img/ticket.svg);
+        background-size: cover;
+        aspect-ratio: 476/230;
+    }
+    h3, p{
+        position: relative;
+        }
 </style>
