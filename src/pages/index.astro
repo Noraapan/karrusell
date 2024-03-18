@@ -2,7 +2,7 @@
 import "/src/styles/style.css";
 
 import Knap from "../components/Knap.astro"
-import Ticket from "../components/Ticket.astro";
+import Hero from "../components/Hero.astro";
 
 import MainLayout from "../layout/MainLayout.astro";
 ---
@@ -14,14 +14,12 @@ import MainLayout from "../layout/MainLayout.astro";
 <Ticket variant="full"></Ticket>
 <Ticket variant="day"></Ticket>
 -->
-<article class="hero">
-<div class="hero_img"><img src="public/img/heroimg.webp" alt="hero imAGE"></div>
-<div class="countdown"><h1>COUNTDOWN</h1></div>
-<div class="ticket">
-<Ticket header="BUY YOUR TICKET" text="Karrusel" text2="Festival">
-	<a href="/#"></a>
-</Ticket></div>
-</article>
+
+<div>
+	<Hero header="COUNTDOWN" text="08:09:08">
+		<img src="public/img/heroimg.webp" alt="hero img">
+	</Hero>
+</div>
 
 <!--knappar -->
 <!-- 

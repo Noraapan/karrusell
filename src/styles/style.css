@@ -20,6 +20,7 @@ html {
 @font-face {
   font-family: Future-West;
   src: url(public/fonts/Future-West.woff2);
+  background-color: transparent;
 }
 
 body {
