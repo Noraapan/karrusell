@@ -1,47 +1,83 @@
 <article class="grid_1-3">
-    <div>
-  <p>HOME</p>
-  <p>LINEUP</p>
-  <p>FAQ</p>
-  <p>CONTACT</p>
+  <div>
+    <p>HOME</p>
+    <p>LINEUP</p>
+    <p>FAQ</p>
+    <p>CONTACT</p>
 
-  <p>FOLLOW US</p>
+    <div class="navigation">
+      <p>FOLLOW US</p>
+    </div>
+  </div>
 
-</div>
+  <div>
+    <img src="" alt="" />
+  </div>
 
-<div>
-  <img src="" alt="" />
-</div>
+  <div>
+    <h4>JOIN THE RIDE</h4>
+    <p>SUBSCRIBE TO OUR NEWSLETTER</p>
 
-<div>
-  <h4>JOIN THE RIDE</h4>
-  <p>SUBSCRIBE TO OUR NEWSLETTER</p>
+    <div class="input-group">
+      <label for="name">Name</label>
+      <input />
+    </div>
 
-  <label>Name</label>
-  <input />
-  <label>E-mail</label>
-  <input />
+    <div class="input-group">
+      <label for="email">E-mail</label>
+      <input />
+    </div>
 
-<button>JOIN</button>
-</div>
+    <button class="join">JOIN</button>
+  </div>
 </article>
 
 <style>
   article {
-    background-color: #0E0E0E;
-    color: #FAFAFA;
-  }
-  .grid_1-3 {
+    background-color: #0e0e0e;
+    color: #fafafa;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding: 4rem;
   }
+
+  .navigation {
+    margin-top: 20px;
+  }
+  .input-group {
+    margin-top: 15px;
+    gap: 5px;
+    font-family: "Inter", sans-serif;
+  }
+
   button {
-    background-color: #FF22FD;
-    color: #FDFEE2;
-    box-shadow: none;
-    border-radius: 5px;
+    grid-column: 2 / span 2;
+    background-color: #ff22fd;
+    color: #fafafa;
+    border-radius: 10px;
+    border: none;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 1.4rem;
+    margin-top: 20px;
   }
+
+  .join {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    border: none;
+  }
+  .join:hover {
+    background-color: #fafafa;
+    color: #ff22fd;
+  }
+
   p {
+    margin-top: 5px;
+    font-family: "Inter", sans-serif;
   }
-  
+  h4 {
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+  }
 </style>
