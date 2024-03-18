@@ -1,7 +1,6 @@
 ---
 import "/src/styles/style.css";
 
-import Card from "../components/Card.astro";
 import Knap from "../components/Knap.astro"
 import Ticket from "../components/Ticket.astro";
 
@@ -15,11 +14,28 @@ import MainLayout from "../layout/MainLayout.astro";
 <Ticket variant="full"></Ticket>
 <Ticket variant="day"></Ticket>
 -->
+<article class="hero">
+<div class="hero_img"></div>
+
 <Ticket header="BUY YOUR TICKET" text="Karrusel" text2="Festival">
 	<a href="/#"></a>
 </Ticket>
+</article>
+
+<!--knappar -->
+<!-- 
 		<Knap variant="join" size="desktop">JOIN</Knap>
 		<Knap variant="about" size="desktop">HISTORY</Knap>
 		<Knap variant="about" size="desktop">SUSTAINABILITY</Knap>
-		<Knap variant="about" size="desktop">CONTACT</Knap>
+		<Knap variant="about" size="desktop">CONTACT</Knap>-->
 	</MainLayout>
+
+	<style>
+article .hero_img{
+		position: absolute;
+        width: 1440px;
+		background-image: url(public/img/heroimg.webp);
+        background-size: cover;
+        aspect-ratio: 1728/1145;
+}
+	</style>
