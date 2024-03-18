@@ -1,5 +1,6 @@
 ---
 const header = Astro.props.header;
+const header2 = Astro.props.header2
 const text = Astro.props.text;
 const text2 = Astro.props.text2;
 ---
@@ -7,6 +8,7 @@ const text2 = Astro.props.text2;
 <div class=ticket2>
     <slot /> 
 <h3>{header}</h3>
+<h3 class="h3_2">{header2}</h3>
 <p>{text}</p>
 <p class="text2">{text2}</p>
 </div>
@@ -15,29 +17,41 @@ const text2 = Astro.props.text2;
 <style>
     .ticket2{
         position: absolute;
-        width: 476px;
-        height: 230px;
+        width: 280px;
+        height: 135px;
         background-image: url(/public/img/ticket.svg);
+        background-size: cover;
+        aspect-ratio: 476/230;
+    }
+    .ticket:hover{
+        position: absolute;
+        width: 280px;
+        height: 135px;
+        background-image: url(/public/img/ticket3.svg);
         background-size: cover;
         aspect-ratio: 476/230;
     }
     h3, p{
         position: relative;
         font-family: "Alfa slab one", sans-serif;
+        color: var(--accent_col);
         }
         h3{
-            top: 37%;
-            left: 20%;
+            top: 23%;
+            left: 18%;
             transform: rotate(-10.98deg);
         }
+        .h3_2{
+            padding-left: 18px;
+        }
         p{
-            top: 105%;
-            left: 46%;
+            top: 62%;
+            left: 47%;
             transform: rotate(-280.99deg);
         }
         p.text2{
-            top: 99%;
-            left: 40%;
+            top: 52%;
+            left: 41%;
             transform: rotate(-280.99deg);   
         }
         :hover{
