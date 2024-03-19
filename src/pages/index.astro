@@ -22,21 +22,28 @@ import MainLayout from "../layout/MainLayout.astro";
   <!--hero: skifte billede mod video -->
   <div class="hero">
     <Hero header="COUNTDOWN" text="">
-      
-            <video id="bgvid" autoplay loop muted playsinline> 
-				<source src="../public/img/karrusel-2.mp4" type="video/mp4">
-			</video>
-          
+      <video id="bgvid" autoplay loop muted playsinline>
+        <source src="../public/img/karrusel-2.mp4" type="video/mp4" />
+      </video>
     </Hero>
   </div>
   <!--line-up körandes -->
-<div class="lineup_lineup">
-	<a href="/src/pages/list-view.astro"><div class="moving_text_container">
-	<h3>LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UPLINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UPLINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP</h3>
-	</div></a>
-</div>
+  <div class="lineup_lineup">
+    <a href="/src/pages/list-view.astro"
+      ><div class="moving_text_container">
+        <h3>
+          LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE
+          UPLINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE
+          UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP
+          LINE UPLINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP
+          LINE UP
+        </h3>
+      </div></a
+    >
+  </div>
   <!--line up -->
 
+<<<<<<< HEAD
 <div class="lineup">
 <article>
 <h3 class="date">THURSDAY 22/8</h3>
@@ -44,14 +51,39 @@ import MainLayout from "../layout/MainLayout.astro";
 <section><h3 class="h_2">MIRA • HAENSEN & GRETEL • MADS LORENZEN SCHWOFDROSSEL</h2></section>
 <section><h3 class="h_3">Worldy Pres. • Boogie Rookie • Futte Rico • Morten Mccoy • Nayan • Seb Dalmar • Storm • Søren Skov</h2></section>
 </article> 
+=======
+  <article>
+    <h3 class="date">THURSDAY 22/8</h3>
+    <section><h3 class="h_1">ÂME • KÖLSCH • MCADAM • SCHAARUP</h3></section>
+    <section>
+      <h3 class="h_2">MIRA • HAENSEN & GRETEL • MADS LORENZEN SCHWOFDROSSEL</h3>
+    </section>
+    <section>
+      <h3 class="h_3">
+        Worldy Pres. • Boogie Rookie • Futte Rico • Morten Mccoy • Nayan • Seb
+        Dalmar • Storm • Søren Skov
+      </h3>
+    </section>
+  </article>
+>>>>>>> 18d360418bf56bc22e103a3def0ed219567f9cfb
 
-<article>
-	<h3 class="date">FRIDAY 23/8</h3>
-	<section><h3 class="h_1">HAAI • NARCISS • SKIN ON SKIN • VIXEN • VTSS</h2></section>
-	<section><h3 class="h_2">ACID PAULI • DJUMA SOUNDSYSTEM • ESKI SATORI • VÄM</h2></section>
-	<section><h3 class="h_3">Chicago Pres. • Cockwhore & Macho • Harrison Heat • Síofra • Tight Cherry</h2></section>
-</article> 
+  <article>
+    <h3 class="date">FRIDAY 23/8</h3>
+    <section>
+      <h3 class="h_1">HAAI • NARCISS • SKIN ON SKIN • VIXEN • VTSS</h3>
+    </section>
+    <section>
+      <h3 class="h_2">ACID PAULI • DJUMA SOUNDSYSTEM • ESKI SATORI • VÄM</h3>
+    </section>
+    <section>
+      <h3 class="h_3">
+        Chicago Pres. • Cockwhore & Macho • Harrison Heat • Síofra • Tight
+        Cherry
+      </h3>
+    </section>
+  </article>
 
+<<<<<<< HEAD
 <article>
 	<h3 class="date">SATURDAY 24/8</h3>
 	<section><h3 class="h_1">ANNA LOGIC • DJ SEA VIEW • FJAAK DJ SET RICHIE HAWTIN • SPFDJ </h2></section>
@@ -59,49 +91,69 @@ import MainLayout from "../layout/MainLayout.astro";
 	<section><h3 class="h_3">All We Need Pres. • Dee Brown • Marshmello • Okine</h2></section>
 </article>  
 </div>
+=======
+  <article>
+    <h3 class="date">SATURDAY 24/8</h3>
+    <section>
+      <h3 class="h_1">
+        ANNA LOGIC • DJ SEA VIEW • FJAAK DJ SET RICHIE HAWTIN • SPFDJ
+      </h3>
+    </section>
+    <section>
+      <h3 class="h_2">
+        JUDITH VAN WATERKANT • KATZ-K • POWERSTRANGER • RSS DISCO
+      </h3>
+    </section>
+    <section>
+      <h3 class="h_3">All We Need Pres. • Dee Brown • Marshmello • Okine</h3>
+    </section>
+  </article>
+
+>>>>>>> 18d360418bf56bc22e103a3def0ed219567f9cfb
   <!--knappar -->
   <!-- 
 		<Knap variant="join" size="desktop">JOIN</Knap>
 		<Knap variant="about" size="desktop">HISTORY</Knap>
 		<Knap variant="about" size="desktop">SUSTAINABILITY</Knap>
 		<Knap variant="about" size="desktop">CONTACT</Knap>-->
+</MainLayout>
 
-	</MainLayout>
-
-  <style>
-	a{
-		text-decoration: none;
-	}
- .lineup_lineup h3{
-font-size: 5rem;
-color: var(--font_col);
-margin-top: 1rem;
-margin-bottom: 1rem;
-/*lineup är en rad*/
-display: flex;
+<style>
+ 
+  a {
+    text-decoration: none;
+  }
+  .lineup_lineup h3 {
+    font-size: 5rem;
+    color: var(--font_col);
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    /*lineup är en rad*/
+    display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
     will-change: transform;
     white-space: nowrap;
-} 
+  }
 
-/*lineup rör sig*/ 
-.lineup_lineup {
+  /*lineup rör sig*/
+  .lineup_lineup {
     position: relative;
     display: flex;
     align-items: center;
-	border: 5px solid var(--font_col);
-}
-.moving_text_container {
+    border: 5px solid var(--font_col);
+  }
+  .moving_text_container {
     animation: moveLinear 120s linear infinite; /* Anpassa varaktighet och andra egenskaper här */
-}
-@keyframes moveLinear {
+  }
+  @keyframes moveLinear {
     from {
-        transform: translateX(-100%);
+      transform: translateX(-100%);
     }
     to {
-        transform: translateX(100%);
+      transform: translateX(100%);
     }
+<<<<<<< HEAD
 }
 .lineup{
 	margin-bottom: 40px;
@@ -136,3 +188,33 @@ color: var(--font_col);
 
 } 
   </style>
+=======
+  }
+
+  .date {
+    padding: 80px 0 0 0;
+    text-align: center;
+  }
+  section {
+    text-align: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 15px;
+  }
+  article {
+    padding-bottom: 30px;
+  }
+  .h_1 {
+    font-size: 3.3rem;
+    color: var(--font_col);
+  }
+  .h_2 {
+    font-size: 2.3rem;
+    color: var(--font_col);
+  }
+  .h_3 {
+    font-size: 2rem;
+    color: var(--font_col);
+  }
+</style>
+>>>>>>> 18d360418bf56bc22e103a3def0ed219567f9cfb
