@@ -1,10 +1,7 @@
 ---
 import "/src/styles/style.css";
-
 import Knap from "../components/Knap.astro";
-import Ticket from "../components/Ticket.astro";
 import Hero from "../components/Hero.astro";
-
 import MainLayout from "../layout/MainLayout.astro";
 ---
 
@@ -34,9 +31,9 @@ import MainLayout from "../layout/MainLayout.astro";
   </div>
   <!--line-up körandes -->
 <div class="lineup_lineup">
-	<img src="../img/line.svg" alt="Linje">
-	<h3>LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP</h3>
-	<img src="../img/line.svg" alt="Linje">
+	<a href="/src/pages/list-view.astro"><div class="moving_text_container">
+	<h3>LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UPLINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UPLINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP</h3>
+	</div></a>
 </div>
   <!--line up -->
 
@@ -71,17 +68,42 @@ import MainLayout from "../layout/MainLayout.astro";
 	</MainLayout>
 
   <style>
+	a{
+		text-decoration: none;
+	}
  .lineup_lineup h3{
 font-size: 5rem;
 color: var(--font_col);
 margin-top: 1rem;
 margin-bottom: 1rem;
+/*lineup är en rad*/
 display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
     will-change: transform;
     white-space: nowrap;
 } 
+
+/*lineup rör sig*/ 
+.lineup_lineup {
+    position: relative;
+    display: flex;
+    align-items: center;
+	border: 5px solid var(--font_col);
+}
+.moving_text_container {
+    animation: moveLinear 120s linear infinite; /* Anpassa varaktighet och andra egenskaper här */
+}
+@keyframes moveLinear {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+
 .date{
 	
 			padding: 80px 0 0 0;
