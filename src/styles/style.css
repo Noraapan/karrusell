@@ -17,7 +17,17 @@ html {
   --accent_col: #ff22fd;
 }
 
+@font-face {
+  font-family: Future-West;
+  src: url(public/fonts/Future-West.woff2);
+  background-color: transparent;
+}
+
 body {
   background-color: var(--background_col);
   color: var(--font_col);
+}
+
+h1 {
+  font-family: Future-West;
 }
