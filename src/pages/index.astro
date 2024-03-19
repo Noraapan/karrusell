@@ -3,6 +3,7 @@ import "/src/styles/style.css";
 
 import Knap from "../components/Knap.astro"
 import Ticket from "../components/Ticket.astro";
+import Hero from "../components/Hero.astro";
 
 import MainLayout from "../layout/MainLayout.astro";
 ---
@@ -12,6 +13,7 @@ import MainLayout from "../layout/MainLayout.astro";
 <Ticket variant="full"></Ticket>
 <Ticket variant="day"></Ticket>
 -->
+
 <article class="hero">
 <div class="hero_img"></div>
 
@@ -19,6 +21,42 @@ import MainLayout from "../layout/MainLayout.astro";
 	<a href="/#"></a>
 </Ticket>
 </article>
+=======
+<!--hero: skifte billede mod video -->
+<div class="hero">
+	<Hero header="COUNTDOWN" text="">
+		<img src="public/img/heroimg.webp" alt="hero img">
+	</Hero>
+</div>
+<!--banderoll -->
+<div class="banderoll">
+	<img src="../img/line.svg" alt="Linje">
+	<h3>LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP LINE UP</h3>
+	<img src="../img/line.svg" alt="Linje">
+</div>
+<!--line up -->
+
+<article>
+<h3 class="date">THURSDAY 22/8</h3>
+<section><h3 class="h_1">ÂME • KÖLSCH  • MCADAM • SCHAARUP</h2></section>
+<section><h3 class="h_2">MIRA • HAENSEN & GRETEL • MADS LORENZEN SCHWOFDROSSEL</h2></section>
+<section><h3 class="h_3">Worldy Pres. • Boogie Rookie • Futte Rico • Morten Mccoy • Nayan • Seb Dalmar • Storm • Søren Skov</h2></section>
+</article> 
+
+<article>
+	<h3 class="date">FRIDAY 23/8</h3>
+	<section><h3 class="h_1">HAAI • NARCISS • SKIN ON SKIN • VIXEN • VTSS</h2></section>
+	<section><h3 class="h_2">ACID PAULI • DJUMA SOUNDSYSTEM • ESKI SATORI • VÄM</h2></section>
+	<section><h3 class="h_3">Chicago Pres. • Cockwhore & Macho • Harrison Heat • Síofra • Tight Cherry</h2></section>
+</article> 
+
+<article>
+	<h3 class="date">SATURDAY 24/8</h3>
+	<section><h3 class="h_1">ANNA LOGIC • DJ SEA VIEW • FJAAK DJ SET RICHIE HAWTIN • SPFDJ </h2></section>
+	<section><h3 class="h_2">JUDITH VAN WATERKANT • KATZ-K • POWERSTRANGER • RSS DISCO</h2></section>
+	<section><h3 class="h_3">All We Need Pres. • Dee Brown • Marshmello • Okine</h2></section>
+</article> 
+>>>>>>> 648182b00c88cac7e329945fc204315b2e5e8d6a
 
 <!--knappar -->
 <!-- 
@@ -28,11 +66,51 @@ import MainLayout from "../layout/MainLayout.astro";
 		<Knap variant="about" size="desktop">CONTACT</Knap>-->
 
 	<style>
+<<<<<<< HEAD
 article .hero_img{
 		position: absolute;
         width: 1440px;
 		background-image: url(public/img/heroimg.webp);
         background-size: cover;
         aspect-ratio: 1728/1145;
+=======
+.banderoll h3{
+font-size: 5rem;
+color: var(--font_col);
+margin-top: 1rem;
+margin-bottom: 1rem;
+display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    will-change: transform;
+    white-space: nowrap;
+}
+		.date{
+	
+			padding: 80px 0 0 0;
+			text-align: center;
+			
+		}
+section{
+	text-align: center;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top: 15px;
+}
+article{
+	padding-bottom: 30px;
+}
+.h_1{
+	font-size: 3.3rem;
+	color: var(--font_col);
+}
+.h_2{
+font-size: 2.3rem;
+color: var(--font_col);
+}
+.h_3{
+	font-size:2rem;
+	color: var(--font_col);
+>>>>>>> 648182b00c88cac7e329945fc204315b2e5e8d6a
 }
 	</style>

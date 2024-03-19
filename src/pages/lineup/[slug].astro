@@ -1,0 +1,108 @@
+---
+import MainLayout from "../../layout/MainLayout.astro";
+// import Singleview from "../../components/Singleview.astro"
+export async function getStaticPaths() {
+  const data = await fetch("https://uxndprtzubwvqmyzoljl.supabase.co/rest/v1/lineup",
+  {
+	method:"GET",
+	headers: {
+		apikey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV4bmRwcnR6dWJ3dnFteXpvbGpsIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDc3NzE5MTUsImV4cCI6MjAyMzM0NzkxNX0.w6gKed3u4tzlHudLYhCmT78TSt5lND2aYd3eQ8gsrVs"
+	}
+  }
+  ).then(response => response.json());
+
+  return data.map((artist) => {
+    return {
+      params: { slug: artist.slug },
+      props: { myData:artist },
+    };
+  });
+}
+const { myData } = Astro.props;
+---
+<!-- i dont know why it is a bunch of errors because i followed Jonas'
+     video every step, and everything works? I also followed Jonas' video
+    "getStaticPaths - live - hold B", and there he also gets these errors
+     but ignores it.. soo lets do the same -->
+<MainLayout title={ myData.name }>
+<dev class="grid">
+    <dev class="singleHero">
+    <img src = `https://uxndprtzubwvqmyzoljl.supabase.co/storage/v1/object/public/lineup/${myData.id}.jpeg`;>
+    <h2 class="artistName">{myData.name}</h2>
+    </dev>
+<p class="desc">{myData.description}</p>
+<dl class="info">
+    <dt>Location</dt>
+    <dd>{myData.location}</dd>
+    <dt>Date</dt>
+    <dd>{myData.date}</dd>
+    <dt>More from the artist</dt>
+    <dd><a href={myData.spotify}>Spotify</a></dd>
+</dl>
+</dev>
+</MainLayout>
+
+<style>
+    h2{
+        font-family: "Alfa Slab One", serif;
+        color: white;
+        font-size: 60px;
+    }
+    p{
+        font-family: "Alfa Slab One", serif;
+    }
+    dt{
+        font-family: "Alfa Slab One", serif;
+        color: white;
+    }
+    dl{
+       font-family: "Alice";
+       color: white;
+       font-size: 20px;
+    }
+
+    .grid{
+        margin: 0 100px 0 100px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .singleHero{
+        grid-column: 1/3;
+        grid-row: 1/2;
+        width: 924px;
+        height: 400px;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+    }
+    .singleHero img{
+     width: 924px;
+     height: 400px;
+     object-fit: cover;
+    }
+    .info{
+        margin-left: 80px;
+        grid-column: 1/2;
+        grid-row: 2/3;
+        margin-top: 80px;
+    }
+    .list{
+        grid-column: 2/3;
+        grid-row: 2/3;
+    }
+    .desc{
+        margin-top: 80px;
+        margin-right: 80px;
+    }
+
+    .artistName{
+    padding: 0.2rem;
+    padding-right: 2rem;
+    position: absolute;
+    right: 0.5rem;
+    top: 22.5rem;
+    mix-blend-mode: exclusion;
+    }
+ 
+</style>
