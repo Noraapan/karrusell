@@ -28,8 +28,11 @@ body {
 
 h1 {
   font-family: Future-West;
-  color: var(--font_col);
+  color: transparent;
+  -webkit-text-stroke-color: var(--font_col);
+  -webkit-text-stroke-width: 0.1px;
 }
+
 h3 {
   font-family: "Alfa slab one", sans-serif;
   color: var(--h2_col);
