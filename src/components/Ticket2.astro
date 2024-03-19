@@ -1,0 +1,78 @@
+---
+const header = Astro.props.header;
+const header2 = Astro.props.header2;
+const header3 = Astro.props.header3;
+const text = Astro.props.text;
+const text2 = Astro.props.text2;
+---
+
+<article class="ticket">
+
+<div class=ticket2>
+        <slot /> 
+    <h3 class="h3_1">{header}</h3>
+    <h3 class="h3_1">{header2}</h3>
+    <h3 class="h3_3">{header3}</h3>
+
+    <p>{text}</p>
+    <p class="text2">{text2}</p>
+
+ </div>
+
+    </article>
+
+
+<style>
+       .ticket2{
+        position: absolute;
+        width: 800px;
+        height: 288px;
+        background-image: url(/public/img/ticket6.svg);
+        background-size: cover;
+        aspect-ratio: 965/349;
+    }
+    .ticket:hover{
+        position: absolute;
+        width: 800px;
+        height: 288px;
+background-image: url(/public/img/ticket2.svg);
+        background-size: cover;
+        aspect-ratio: 965/349;
+    }
+    .h3_1{
+       color: var(--font_col);
+       font-size: 2rem;
+    
+    }
+    .h3_3{
+        padding: 20px;
+        
+    }
+
+    h3, p{
+        position: relative;
+        font-family: "Alfa slab one", sans-serif;
+   
+
+        }
+        h3{
+            top: 23%;
+            left: -12%;
+            letter-spacing: 2px;
+            text-align: center;
+        }
+
+        p{
+            top: -6%;
+            left: 42%;
+            transform: rotate(-269.99deg);
+            font-size: 1rem;
+            letter-spacing: 1.5px;
+            text-align: center;
+        }
+        p.text2{
+            top: -13%;
+            left: 39%;
+            transform: rotate(-269.99deg);   
+        }
+</style>

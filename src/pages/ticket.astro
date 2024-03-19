@@ -1,0 +1,27 @@
+---
+import MainLayout from "../layout/MainLayout.astro";
+import Ticket2 from "../components/Ticket2.astro";
+---
+
+<MainLayout>
+<h3 class="start_text">Early bird catches the worm... 
+    Buy your ticket now!</h3>
+
+    <a href="#"><div class="ticket">
+        <Ticket2 header="KARRUSEL 2024" header2="FULL FESTIVAL PASS" header3="800 DKK" text="Early Bird" text2="Ticket">
+           
+        </Ticket2></div>
+    </a>
+</MainLayout>
+
+<style>
+.start_text{
+    text-align: center;
+    margin-left: 8em;
+    margin-right: 8em;
+    font-size: 1.8rem;
+    color: var(--font_col);
+}
+
+
+</style>
