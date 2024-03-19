@@ -8,12 +8,13 @@ import Ticket2 from "../components/Ticket2.astro";
 
 <h3 class="text">Early bird catches the worm... 
     Buy your ticket now!</h3>
-
-    <a href="#"><div class="ticket">
-        <Ticket2 header="KARRUSEL 2024" header2="FULL FESTIVAL PASS" header3="800 DKK" text="Early Bird" text2="Ticket"></Ticket2></div>
+    
+<div class="ticket">
+    <a href="#">
+        <Ticket2 header="KARRUSEL 2024" header2="FULL FESTIVAL PASS" header3="800 DKK" text="Early Bird" text2="Ticket"></Ticket2>
     </a>
-
-    <h3 class="text">Day passes will be available for purchase at a later time...</h3>
+</div>
+    <h3 class="text2">Day passes will be available for purchase at a later time...</h3>
 
 </div>
 </MainLayout>
@@ -26,7 +27,19 @@ import Ticket2 from "../components/Ticket2.astro";
     font-size: 1.8rem;
     color: var(--font_col);
 }
+.text2{
 
+    text-align: center;
+    margin-left: 3em;
+    margin-right: 3em;
+    font-size: 1.8rem;
+    color: var(--font_col);
+}
+.textur{
+    background-image: url("../img/texturclown.svg");
+    background-size: cover;
+    aspect-ratio: 913/1088;
+}
 
 
 </style>
