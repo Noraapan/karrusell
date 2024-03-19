@@ -6,7 +6,7 @@ const text = Astro.props.text;
 const text2 = Astro.props.text2;
 ---
 
-<article class="ticket">
+
 
 <div class=ticket2>
         <slot /> 
@@ -19,20 +19,19 @@ const text2 = Astro.props.text2;
 
  </div>
 
-    </article>
-
-
 <style>
        .ticket2{
         position: absolute;
+        left: 35vh;
         width: 800px;
         height: 288px;
         background-image: url(/public/img/ticket6.svg);
         background-size: cover;
         aspect-ratio: 965/349;
     }
-    .ticket:hover{
+    .ticket2:hover{
         position: absolute;
+        left: 35vh;
         width: 800px;
         height: 288px;
 background-image: url(/public/img/ticket2.svg);
