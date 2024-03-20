@@ -1,6 +1,7 @@
 ---
 import "/src/styles/style.css";
 
+import Menu from "../components/Menu.astro";
 ---
 
 <nav class="navbar">
@@ -22,6 +23,8 @@ import "/src/styles/style.css";
       <div class="burger-line"></div>
     </div>
   </div>
+
+  <Menu isOpen={isMenuOpen} />
 </nav>
 
 <script>
@@ -34,6 +37,12 @@ import "/src/styles/style.css";
       menuItems.classList.toggle("show");
     });
   });
+
+  let isMenuOpen = false;
+
+function toggleMenu() {
+  isMenuOpen = !isMenuOpen;
+}
 </script>
 
 <style>
@@ -76,7 +85,6 @@ import "/src/styles/style.css";
   .menu-items.show {
     display: block;
   }
-
   .burger-menu.active .burger-line:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
   }
