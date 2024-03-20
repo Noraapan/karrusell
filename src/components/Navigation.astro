@@ -1,7 +1,6 @@
 ---
 import "/src/styles/style.css";
 
-import Menu from "../components/Menu.astro";
 ---
 
 <nav class="navbar">
@@ -23,8 +22,6 @@ import Menu from "../components/Menu.astro";
       <div class="burger-line"></div>
     </div>
   </div>
-
-  <Menu isOpen={isMenuOpen} />
 </nav>
 
 <script>
@@ -37,12 +34,6 @@ import Menu from "../components/Menu.astro";
       menuItems.classList.toggle("show");
     });
   });
-
-  let isMenuOpen = false;
-
-function toggleMenu() {
-  isMenuOpen = !isMenuOpen;
-}
 </script>
 
 <style>
