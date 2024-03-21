@@ -8,9 +8,10 @@ import Ticket2 from "../components/Ticket2.astro";
 
 <h1>TICKETS</h1>
 
-<h3 class="text">Early bird catches the worm... 
-    Buy your ticket now!</h3>
-    
+<div class="text">
+<h3>Early bird catches the worm...</h3> 
+    <h3>Buy your ticket now!</h3>
+</div>
 <div class="ticket">
     <a href="https://www.ticketmaster.dk/event/542817" target=“_blank>
         <Ticket2 header="KARRUSEL 2024" header2="FULL FESTIVAL PASS" header3="800 DKK" text="Early Bird" text2="Ticket"></Ticket2>
@@ -27,26 +28,33 @@ import Ticket2 from "../components/Ticket2.astro";
 </MainLayout>
 
 <style>
+      @media (max-width: 650px){
+
+      }
 h1{
     text-align: center;
-    font-size: 5.4rem;
     padding-bottom: 55px;
+}
+.text h3{
+    color: var(--font_col);
+    font-size: 1.8rem;
 }
 .text{
     text-align: center;
-    margin-left: 12em;
-    margin-right: 12em;
-    font-size: 1.8rem;
-    color: var(--font_col);
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 15vh;
 }
 .text2{
     text-align: center;
-    margin-left: 3em;
-    margin-right: 3em;
+    margin-left: auto;
+    margin-right: auto;
     font-size: 1.8rem;
     color: var(--font_col);
     padding-top: 70vh;
+    padding-bottom: 20vh;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .textur{
     background-image: url("../img/bakgrundclown.svg");
@@ -54,5 +62,18 @@ h1{
     aspect-ratio: 913/1088;
 }
 
+/* Media query för mindre skärmar*/
+@media (max-width: 650px) {
+    .text h3, .text2{
+        font-size: 1rem;
+        
+    }
+    .text2{
+        padding-top: 20vh;
+    }
+
+}
+
+</style>
 
 </style>

@@ -74,4 +74,62 @@ background-image: url(/public/img/ticket2.svg);
             left: 39%;
             transform: rotate(-269.99deg);   
         }
+
+        @media (max-width: 900px) {
+        .ticket2, .ticket2:hover{
+    transform: translate(-50%, -50%);
+
+        width: 360px;
+        height: 130px;
+    }
+    
+    h3, p{
+        position: relative;
+        font-family: "Alfa slab one", sans-serif;
+
+        }
+        h3{
+            top: 23%;
+            left: -12%;
+            text-align: center;
+        }
+        .h3_1{
+            font-size: 1rem;
+        }
+
+        p{
+            top: -42%;
+            left: 42%;
+            transform: rotate(-269.99deg);
+            font-size: 0.6;
+            letter-spacing: 1.5px;
+            text-align: center;
+        }
+        p.text2{
+            top: -58%;
+            left: 37%;
+            transform: rotate(-269.99deg);   
+        }
+}
+
+@media (max-width: 400px){
+    .ticket2, .ticket2:hover{
+    width: 220px;
+    height: 79px;
+    }
+    .h3_1, p{
+            font-size: 0.7rem;
+        }
+    h3{
+        top: 6%;
+    }
+    p{
+            top: -78%;
+            letter-spacing: 1px;
+        }
+    p.text2{
+            top: -99%;  
+        }
+
+}
 </style>
