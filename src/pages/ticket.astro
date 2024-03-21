@@ -22,15 +22,23 @@ import Ticket2 from "../components/Ticket2.astro";
 
 <div class="daypasses">
 <!--day tickets -->
+<img class= "day" src="../img/day1.svg" alt="day pass">
+<img class= "day" src="../img/day2.svg" alt="day pass">
+<img class= "day" src="../img/day3.svg" alt="day pass">
 </div>
 
 </div>
 </MainLayout>
 
 <style>
-      @media (max-width: 650px){
-
-      }
+.daypasses{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 30px;
+}
+.day{
+    width: 90%;
+}
 h1{
     text-align: center;
     padding-bottom: 55px;
