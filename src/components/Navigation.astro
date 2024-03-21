@@ -6,6 +6,11 @@ import "/src/styles/style.css";
 <nav class="navbar">
   <a href="../pages/index.astro"><img src="../public/img/clown1.svg" /></a>
 
+  <div class="name_container">
+    <h1 class="name">KARRUSEL</h1>
+    <h3 class="date">22-24 AUGUST 2024</h3>
+  </div>
+
   <div class="menu-container">
     <div class="menu-items">
       <a href="../pages/listview.astro">LINEUP</a>
@@ -37,6 +42,23 @@ import "/src/styles/style.css";
 </script>
 
 <style>
+.name_container{
+  margin-right: auto;
+  margin-left: auto;
+  }
+.name{
+  text-align: center;
+  font-size: 2em;
+  -webkit-text-stroke-color: var(--accent_col);
+  }
+.date{
+  text-align: center;
+  color: transparent;
+  -webkit-text-stroke-color: var(--h2_col);
+  -webkit-text-stroke-width: 0.3px;
+  font-size: 15px;
+  letter-spacing: -1px;
+  }
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -53,9 +75,9 @@ import "/src/styles/style.css";
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    position: absolute;
+    /* position: absolute;
     top: 10px;
-    right: 20px;
+    right: 20px; */
   }
 
   .burger-line {
