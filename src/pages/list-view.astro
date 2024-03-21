@@ -27,23 +27,52 @@ const data = await fetch("https://uxndprtzubwvqmyzoljl.supabase.co/rest/v1/lineu
 		<MainLayout>
 			<h1 class="head">LINEUP</h1>
 			<h3 class="paragraph">THE ARTISTS</h3>
+			<div class="margin">
 			<section class="artists">
 				{
 				data.map((artist) => {
 					return <List data={artist} />;
 				})}
-				
 			</section>
+		</div>
 	</MainLayout>
 	</body>
 </html>
 
 <style>
+	 @media (min-width: 900px){
+		.margin{
+		margin-left: auto;
+		margin-right: auto;
+		width: 900px;
+	}
+
 	.artists{
 	  display: grid;
 	  grid-template-columns: repeat(3, 1fr);
-	  margin: 0 190px 100px 190px;
 	}
+  }
+
+  @media (max-width: 900px){
+	.margin{
+		margin-left: auto;
+		margin-right: auto;
+		width: 600px;
+	}
+	.artists{
+	  display: grid;
+	  grid-template-columns: repeat(2, 1fr);
+	}
+  }
+
+  @media (max-width: 600px){
+	.margin{
+		margin-left: auto;
+		margin-right: auto;
+		width: 300px;
+	}
+  }
+
 	.head{
 		font-size: 70px;
 		text-align: center;

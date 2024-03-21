@@ -20,6 +20,19 @@ const text = Astro.props.text;
     position: relative;
 }
 
+@media (max-width: 600px){
+    .card{
+    width: 150px;
+    height: 110px;
+    position: relative;
+}
+
+
+.card .name h3,
+.card .name span {
+    font-size: 10px;
+}
+}
 .img {
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
