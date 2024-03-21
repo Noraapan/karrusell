@@ -26,7 +26,7 @@ import Ticket from "../components/Ticket.astro";
 .ticket {
     position: absolute;
     left: 40%;
-    top: 120%;
+    top: 150%;
 
 }
 #klocka{
@@ -49,6 +49,46 @@ h1{
     font-size: 5.4rem;
 }
 
+/* Media query för mindre skärmar (max 768px) */
+@media only screen and (max-width: 768px) {
+  .ticket {
+    top: 63%;
+    left: 20%;
+  }
+
+  #klocka {
+    left: 50%; /* Centrera klockan på mindre skärmar */
+    transform: translateX(-50%);
+    top: 22%; /* Justera positionen för klockan på mindre skärmar */
+    font-size: 2rem; /* Justera storleken på klockan för mindre skärmar */
+  }
+
+  #countdown {
+    left: 50%; /* Centrera räknaren på mindre skärmar */
+    transform: translateX(-50%);
+    top: 12%; /* Justera positionen för räknaren på mindre skärmar */
+  }
+
+  h1 {
+    font-size: 3.4rem; /* Justera storleken på rubriker för mindre skärmar */
+  }
+}
+
+/* Media query för större skärmar (minst 1024px) */
+@media only screen and (min-width: 1024px) {
+  .ticket {
+    left: 40%; /* Behåll positionen på större skärmar om önskat */
+    top: 70%;
+  }
+
+  #klocka {
+    font-size: 4rem; /* Återställ storleken på klockan för större skärmar om önskat */
+  }
+
+  #countdown {
+    font-size: 5.4rem; /* Återställ storleken på räknaren för större skärmar om önskat */
+  }
+}
 </style>
 
 
