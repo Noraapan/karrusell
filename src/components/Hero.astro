@@ -47,51 +47,62 @@ h1{
     font-size: 5.4rem;
 }
 
-/* Media query för mindre skärmar (max 768px) */
-@media (max-width: 650px) {
+@media (max-width: 400px){
+  #klocka {
+    left: 50%;
+    transform: translateX(-50%);
+    top: 22%;
+    font-size: 1rem; 
+  }
+
+  #countdown {
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem; 
+    top: 12%;
+  }
   .ticket {
     top: 53%;
-    left: 30%;
-    
+    left: 0%;
+  }
+}
+@media (max-width: 650px) {
+  .ticket {
+    top: 53%;    
+    left: 10%;
     transform: translateX(-50%);
   }
 
   #klocka {
-    left: 50%; /* Centrera klockan på mindre skärmar */
+    left: 50%;
     transform: translateX(-50%);
-    top: 22%; /* Justera positionen för klockan på mindre skärmar */
-    font-size: 1.5rem; /* Justera storleken på klockan för mindre skärmar */
+    top: 22%;
+    font-size: 1.5rem; 
   }
 
   #countdown {
-    left: 50%; /* Centrera räknaren på mindre skärmar */
+    left: 50%;
     transform: translateX(-50%);
-    font-size: 3rem; 
-    top: 12%; /* Justera positionen för räknaren på mindre skärmar */
-  }
-
-  h1 {
-    font-size: 3.4rem; /* Justera storleken på rubriker för mindre skärmar */
+    font-size: 2.7rem; 
+    top: 12%;
   }
 }
 
-/* Media query för större skärmar (minst 1024px) */
+
 @media (min-width: 1600px) {
   .ticket {
-    left: 45%; /* Behåll positionen på större skärmar om önskat */
+    left: 45%; 
     top: 70%;
 
   }
 
   #klocka {
-    font-size: 3.8rem; /* Återställ storleken på klockan för större skärmar om önskat */
-    left: 36%; /* Behåll positionen på större skärmar om önskat */
+    left: 36%; 
     top: 33%;
   }
 
   #countdown {
-    font-size: 4.2rem; /* Återställ storleken på räknaren för större skärmar om önskat */
-    left: 30%; /* Behåll positionen på större skärmar om önskat */
+    left: 30%;
     top: 19%;
   }
 }
