@@ -12,36 +12,34 @@ import Ticket from "../components/Ticket.astro";
 <h1 id="klocka">{text}</h1>
 </div>
 
-<a href="#"><div class="ticket">
+<a href="http://localhost:4321/ticket"><div class="ticket">
     <Ticket header="BUY YOUR" header2="TICKET" text="Karrusel" text2="Festival">
        
     </Ticket></div>
-</a></article> 
+</a>
+</article> 
 
 <style>
-.hero {
+article {
     position: relative;
 }
 
 .ticket {
     position: absolute;
     left: 40%;
-    top: 150%;
+    top: 60%;
 
 }
 #klocka{
     position: absolute;
     left: 31%;
     top: 40%;
-    text-align: center;    
     font-size: 4rem;
     padding-top: 20px;
 }
 #countdown{
     position: absolute;
-    text-align: center;  
-    margin-left: auto;
-    margin-right: auto;
+
     left: 18%;
     top: 30%; 
 }
@@ -50,22 +48,25 @@ h1{
 }
 
 /* Media query för mindre skärmar (max 768px) */
-@media only screen and (max-width: 768px) {
+@media (max-width: 900px) {
   .ticket {
-    top: 63%;
-    left: 20%;
+    top: 53%;
+    left: 30%;
+    
+    transform: translateX(-50%);
   }
 
   #klocka {
     left: 50%; /* Centrera klockan på mindre skärmar */
     transform: translateX(-50%);
     top: 22%; /* Justera positionen för klockan på mindre skärmar */
-    font-size: 2rem; /* Justera storleken på klockan för mindre skärmar */
+    font-size: 1.5rem; /* Justera storleken på klockan för mindre skärmar */
   }
 
   #countdown {
     left: 50%; /* Centrera räknaren på mindre skärmar */
     transform: translateX(-50%);
+    font-size: 3rem; 
     top: 12%; /* Justera positionen för räknaren på mindre skärmar */
   }
 
@@ -75,18 +76,23 @@ h1{
 }
 
 /* Media query för större skärmar (minst 1024px) */
-@media only screen and (min-width: 1024px) {
+@media (min-width: 1600px) {
   .ticket {
-    left: 40%; /* Behåll positionen på större skärmar om önskat */
+    left: 45%; /* Behåll positionen på större skärmar om önskat */
     top: 70%;
+
   }
 
   #klocka {
-    font-size: 4rem; /* Återställ storleken på klockan för större skärmar om önskat */
+    font-size: 3.8rem; /* Återställ storleken på klockan för större skärmar om önskat */
+    left: 36%; /* Behåll positionen på större skärmar om önskat */
+    top: 33%;
   }
 
   #countdown {
-    font-size: 5.4rem; /* Återställ storleken på räknaren för större skärmar om önskat */
+    font-size: 4.2rem; /* Återställ storleken på räknaren för större skärmar om önskat */
+    left: 30%; /* Behåll positionen på större skärmar om önskat */
+    top: 19%;
   }
 }
 </style>
