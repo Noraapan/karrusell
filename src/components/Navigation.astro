@@ -11,37 +11,99 @@ import "/src/styles/style.css";
     <h3 class="date">22-24 AUGUST 2024</h3>
   </div>
 
-  <div class="menu-container">
-    <div class="menu-items">
-      <a href="../pages/listview.astro">LINEUP</a>
-      <a href="#">TICKETS</a>
-      <a href="#">NEWSLETTER</a>
-      <a href="#">ABOUT</a>
-      <a href="#">FAQ</a>
-      <a href="#">CONTACT</a>
-    </div>
+  <h2 class="infoOpen">&#9776;</h2>
 
-    <div class="burger-menu" onclick="toggleMenu()">
-      <div class="burger-line"></div>
-      <div class="burger-line"></div>
-      <div class="burger-line"></div>
-    </div>
-  </div>
 </nav>
+<section aria-label="information tab" class="info hide">
+  <h2 class="infoclose">&#10005;</h2>
+  <h3 class="infodate">22-24 AUGUST 2024</h3>
+  <ul>
+    <li><a href="../pages/index.astro">HOME</a></li>
+      <li><a href="../pages/listview.astro">LINEUP</a></li>
+      <li><a href="../pages/ticket.astro">TICKETS</a></li>
+      <li><a href="../pages/about.astro">ABOUT</a></li>
+  </ul>
+</section>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const burgerMenu = document.querySelector(".burger-menu");
-    const menuItems = document.querySelector(".menu-items");
+  window.addEventListener("load", sidanVisas);
+  const infoScreen = document.querySelector(".info");
 
-    burgerMenu.addEventListener("click", function () {
-      burgerMenu.classList.toggle("active");
-      menuItems.classList.toggle("show");
-    });
-  });
+  function sidanVisas() {
+      document.querySelector(".infoOpen").addEventListener("click", startInfo);
+  }
+
+  function startInfo() {
+      infoScreen.classList.remove("hide");
+      document.querySelector(".infoclose").addEventListener("click", hideInfo);
+  }
+
+  function hideInfo() {
+      infoScreen.classList.add("hide");
+  }
 </script>
 
 <style>
+  .info {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #751f75;
+        background-image: url(../../public/img/bakgrundclown.svg);
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: center 0;
+        z-index: 5;
+    }
+
+    .info ul {
+      margin-top: 3%;
+        list-style: none;
+        text-align: center;
+    }
+    a{
+      font-family: Future-West;
+        color: transparent;
+        font-size: 5.4rem;
+        -webkit-text-stroke-color: var(--font_col);
+        -webkit-text-stroke-width: 1.5px;
+        text-decoration: none;
+    }
+    a:hover{
+      color: var(--font_col);
+    }
+    .infoOpen{
+      color: var(--font_col);
+    }
+  .infoOpen:hover {
+      cursor: pointer;
+  }
+
+  .infoclose:hover {
+      cursor: pointer;
+  }
+
+  .infoclose {
+      position: fixed;
+      z-index: 6;
+      color: var(--font_col);
+      cursor: pointer;
+      padding: 50px 20px 5px 5px;
+      right: 0;
+  }
+.infodate{
+  color: transparent;
+  -webkit-text-stroke-color: var(--h2_col);
+  -webkit-text-stroke-width: 0.3px;
+  font-size: 20px;
+  letter-spacing: -1px;
+  padding: 50px 0 0 20px;
+}
+  .hide{
+    display: none;
+  }
 .name_container{
   margin-right: auto;
   margin-left: auto;
@@ -71,40 +133,9 @@ import "/src/styles/style.css";
     background-color: transparent;
   }
 
-  .burger-menu {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    /* position: absolute;
-    top: 10px;
-    right: 20px; */
-  }
-
-  .burger-line {
-    width: 30px;
-    height: 3px;
-    background-color: #fafafa;
-    margin: 4px 0;
-  }
-
-  .menu-items {
-    display: none;
-    position: absolute;
-    top: 40px;
-    right: 0;
-    padding: 10px;
-  }
-
-  .menu-items.show {
-    display: block;
-  }
-  .burger-menu.active .burger-line:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
- .burger-menu.active .burger-line:nth-child(2) {
-    opacity: 0;
-  }
-  .burger-menu.active .burger-line:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
+  @media (max-width: 650px){
+    a{
+      font-size: 3rem;
+    }
   }
 </style>
