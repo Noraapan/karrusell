@@ -28,6 +28,7 @@ body {
 
 h1 {
   font-family: Future-West;
+  text-align: center;
   color: transparent;
   font-size: 5.4rem;
   -webkit-text-stroke-color: var(--font_col);
