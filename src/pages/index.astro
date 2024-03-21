@@ -171,4 +171,16 @@ import MainLayout from "../layout/MainLayout.astro";
     color: var(--font_col);
   }
 
+  /* change height on media query */
+  #bgvid{
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+  }
+  @media (max-width: 650px){
+    #bgvid{
+      height: 400px;
+    }
+  }
+
 </style>
