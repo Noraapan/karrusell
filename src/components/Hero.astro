@@ -8,7 +8,7 @@ import Ticket from "../components/Ticket.astro";
 <article>
 <div class="hero">
     <slot />
-<h1 class="countdown">{header}</h1>
+<h1 id="countdown">{header}</h1>
 <h1 id="klocka">{text}</h1>
 </div>
 
@@ -27,6 +27,7 @@ import Ticket from "../components/Ticket.astro";
     position: absolute;
     left: 40%;
     top: 120%;
+
 }
 #klocka{
     position: absolute;
@@ -36,14 +37,16 @@ import Ticket from "../components/Ticket.astro";
     font-size: 4rem;
     padding-top: 20px;
 }
-.countdown{
+#countdown{
     position: absolute;
+    text-align: center;  
+    margin-left: auto;
+    margin-right: auto;
     left: 18%;
     top: 30%; 
 }
 h1{
     font-size: 5.4rem;
-
 }
 
 </style>
